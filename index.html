@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="libdebug is a Python library to debug binary executables, your own way">
-    <title>libdebug</title>
+    <meta name="description" content="libdeb... ugh! is a Python library to debug binary executables, your own way">
+    <title>libdeb... ugh!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
@@ -53,6 +53,28 @@
             margin-top: 0;
             margin-bottom: 0px;
         }
+
+		#animatedText {
+			font-family: 'Nunito', sans-serif;
+			font-size: 5em;
+			font-weight: bold;
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			animation: typingFirst 2s steps(10) 0.5s forwards, typingSecond 1s steps(4) 3.5s forwards;
+			width: 0ch;
+		}
+
+		@keyframes typingFirst {
+			0% { width: 0ch; }
+			100% { width: 6ch; } /* Adjust the width based on the number of characters */
+		}
+
+		@keyframes typingSecond {
+			0% { width: 10ch; }
+			100% { width: 14ch; } /* Adjust for total number of characters */
+		}
+
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -72,13 +94,10 @@
     <div class="container">
         <a href="https://github.com/libdebug/libdebug">
             <div class="logo">
-                <video class="logo" autoplay loop muted playsinline>
-                    <source src="./videos/libdebugging_animation.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+				<img src="./images/libdebug_logo_overlayed.jpg" alt="libdebug" class="logo">
             </div>
         </a>
-        <h1 class="libdebug-logo-text">libdebug</h1>
+        <h1 class="libdebug-logo-text" id="animatedText">libdeb... ugh!</h1>
         <p>
             A Python library to debug binary executables, your own way.
         </p>
