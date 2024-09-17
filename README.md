@@ -1,1 +1,2 @@
-# Parody Website for libdebug
+# libdebug.github.io
+website for libdebug
